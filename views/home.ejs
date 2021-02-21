@@ -1,0 +1,10 @@
+<%- include("partials/header"); -%>
+<div class="container"> 
+<h1>Home</h1>
+<p><%= homecontent %></p>
+
+<% for(var i=0;i<postdata.length;i++){ %>
+<h1><%= postdata[i].title %></h1>
+<p><%= postdata[i].body.substring(0,100) +"..." %><a class="anchor" href=<%="/post/"+postdata[i].title %>>read more</a></p>
+<%}%>
+</div>
